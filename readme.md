@@ -1,5 +1,7 @@
 # Scalable Banking API -  Transaction Processing and Consistency
 
+Video Walkthrough: https://www.loom.com/share/fdc0e8186c0241e9989d2bc4431b2bdf
+
 1. To Design a Restful API for processing transactions with the following requirements:
 
 <ul>
