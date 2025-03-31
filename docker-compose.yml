@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  banking-api:
+    build: 
+      context: .
+    container_name: banking-api-demo
+    ports:
+      - "5002:5002"
+    depends_on:
+      - db
+    networks:
+      - flask_network
+
+  db:
+    image: "postgres:alpine"
+    container_name: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: banking_db
+    ports:
+      - "5432"
+    networks:
+      - flask_network
+
+networks:
+  flask_network:
+    driver: bridge
