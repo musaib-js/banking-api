@@ -43,6 +43,7 @@ This table shall be used to store all the Accounts, along with the necessary inf
 | `amount`  | Float  | Not Null                         |
 | `transaction_type` | String(10)      | `Credit` or `Debit`        |
 | `transaction_status` | String(10)      | `Success` or `Failure`        |
+| `timestamp` | DateTime     |  -       |
 
 This table shall be used to store all the Transactions that have been carried out
 </ul>

@@ -88,6 +88,12 @@ def create_transaction():
             db.session.add(debit_transaction)
             db.session.add(credit_transaction)
             db.session.commit()
+            
+            # Mark the transactions as completed
+            debit_transaction.status = "Completed"
+            credit_transaction.status = "Completed"
+            
+            db.session.commit()
 
             return (
                 jsonify(
